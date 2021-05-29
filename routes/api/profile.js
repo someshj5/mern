@@ -197,7 +197,6 @@ router.put(
       const profile = await Profile.findOne({ user: req.user.id });
       profile.experience.unshift(newExp);
       await profile.save();
-      console.log(profile);
 
       res.json(profile);
     } catch (err) {
