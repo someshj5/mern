@@ -285,7 +285,6 @@ router.delete("/education/:edu_id", auth, async (req, res) => {
       .indexOf(req.params.edu_id);
 
     profile.education.splice(removeIndex, 1);
-    // console.log("here");
 
     await profile.save();
 
